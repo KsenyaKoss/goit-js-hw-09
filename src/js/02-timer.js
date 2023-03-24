@@ -22,8 +22,6 @@ const options = {
         Notiflix.Notify.failure("Please choose a date in the future")} 
          else { startBtn.disabled = false;
             TIME_DIFF = selectedDates[0];
-            console.log(selectedDates[0]);
-            console.log(TIME_DIFF);
          }
     },
   };
