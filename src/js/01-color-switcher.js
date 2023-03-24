@@ -9,9 +9,7 @@ stopBtn.disabled = true;
 
 function changingColor(){
     document.body.style.backgroundColor = getRandomHexColor();
-    startBtn.disabled = true;
-    stopBtn.disabled = false;
-}
+  }
 
 function stopChangingColor() {
     clearInterval(timerId); 
@@ -19,6 +17,10 @@ function stopChangingColor() {
     stopBtn.disabled = true;
 }
 
-startBtn.addEventListener('click', () => timerId = setInterval(changingColor, 1000));
+startBtn.addEventListener('click', () => {
+  startBtn.disabled = true;
+  stopBtn.disabled = false
+  return timerId = setInterval(changingColor, 1000)
+});
 
-stopBtn.addEventListener('click',stopChangingColor);
+stopBtn.addEventListener('click', stopChangingColor);
