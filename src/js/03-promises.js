@@ -4,8 +4,10 @@ import Notiflix from 'notiflix'
 
 submitBtn.addEventListener('click', (ev)=>{
      ev.preventDefault();
-     let delay = parseInt(document.querySelector('[name="delay"]').value);
-     const step = parseInt(document.querySelector('[name="step"]').value);
+     let delay = parseInt(document.querySelector('[name="delay"]').value)?
+     parseInt(document.querySelector('[name="delay"]').value) : 0;
+     const step = parseInt(document.querySelector('[name="step"]').value)?
+     parseInt(document.querySelector('[name="step"]').value) : 0 ;
      const amount = parseInt(document.querySelector('[name="amount"]').value);
   for (let index = 0; index < amount; index++) {
     let position = 1;
